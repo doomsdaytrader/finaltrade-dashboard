@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>THE FINAL TRADE - LUNC to $0.37</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Top App Bar -->
+        <header class="app-header glass">
+            <div class="header-content">
+                <div class="brand">
+                    <img src="https://assets.coingecko.com/coins/images/8284/large/01_LunaClassic_color.png" class="brand-logo" alt="LUNC Logo">
+                    <div class="brand-text">
+                        <h1>LUNC TO $0.37</h1>
+                        <span class="status-indicator online" id="connection-status">
+                            <span class="dot"></span>
+                            <span class="status-text">LIVE BURN TRACKER</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="content-scroll" id="main-content">
+            
+            <!-- Hero / Progress -->
+            <section class="view-section active">
+                <div class="hero-section">
+                    <h2>THE ROAD TO $0.37</h2>
+                    <p>Track the global Terra Classic (LUNC) community effort to radically reduce circulating supply.</p>
+                </div>
+                
+                <div class="card glass text-center glow-card">
+                    <h3 class="price-display" id="live-price">$0.00000000</h3>
+                    <p class="price-sub">Live LUNC/USD Market Price</p>
+                    
+                    <div class="progress-bar-container mt-2">
+                        <div class="progress-bar amber-glow" id="target-progress" style="width: 0%;"></div>
+                    </div>
+                    <div class="flex-between mt-1 text-xs text-muted">
+                        <span>Current</span>
+                        <span>Target: $0.37</span>
+                    </div>
+                    
+                    <div class="burn-stats-grid mt-2">
+                        <div class="stat-box">
+                            <ion-icon name="flame" class="text-amber"></ion-icon>
+                            <span class="stat-val" id="total-burned">Loading...</span>
+                            <span class="stat-label">Total Circulating</span>
+                        </div>
+                        <div class="stat-box">
+                            <ion-icon name="people" class="text-blue"></ion-icon>
+                            <span class="stat-val" id="total-holders">5.5M+</span>
+                            <span class="stat-label">Wallets Ranked #<span id="crypto-rank">--</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button Alert -->
+                <div class="card glass text-center mt-1 outline-accent">
+                    <h3 class="text-amber"><ion-icon name="warning"></ion-icon> DIRECT BURN ACTION</h3>
+                    <p class="text-sm text-muted mt-1">Every trade you make on partner exchanges reduces LUNC circulating supply through implicit tax/fee burns.</p>
+                </div>
+
+                <!-- Exchange Routing -->
+                <h3 class="section-title mt-2">TRADE & BURN ON:</h3>
+                <div class="exchange-grid mt-1">
+                    <a href="https://partner.bydfi.com/register?vipCode=Bz6sDC2e&f=Thefinaltrade" target="_blank" class="exchange-btn bydfi">
+                        <ion-icon name="bar-chart-outline"></ion-icon> BYDFi
+                    </a>
+                    <a href="https://www.weex.com/en/spot/LUNC_USDT?vipCode=t4fl" target="_blank" class="exchange-btn weex">
+                        <ion-icon name="pulse-outline"></ion-icon> WEEX
+                    </a>
+                    <a href="https://www.bitunix.com/register?vipCode=cujH" target="_blank" class="exchange-btn bitunix">
+                        <ion-icon name="flash-outline"></ion-icon> Bitunix
+                    </a>
+                    <a href="https://www.kcex.com/register?inviteCode=ZAWFPO" target="_blank" class="exchange-btn kcex">
+                        <ion-icon name="analytics-outline"></ion-icon> KCEX
+                    </a>
+                    <a href="https://www.btcc.com/en-US/register?inviteCode=Z0TOZT&utm_source=kol" target="_blank" class="exchange-btn btcc" style="grid-column: span 2;">
+                        <ion-icon name="globe-outline"></ion-icon> BTCC
+                    </a>
+                </div>
+
+                <!-- Terra Classic Legal News -->
+                <div class="card glass mt-2" id="news-section">
+                    <h3><ion-icon name="newspaper-outline"></ion-icon> TERRA LEGAL & ECOSYSTEM INTEL</h3>
+                    <div id="news-feed" class="mt-1">
+                        <!-- JS populated -->
+                        <div class="news-item">
+                            <span class="news-date">LIVE CRAWLER</span>
+                            <p class="news-title">Scanning Terra Classic network parameters and TFL legal dockets...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>✝️ <i>The Final Trade — All glory to God.</i></p>
+        </footer>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
